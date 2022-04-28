@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {QueryClient, QueryClientProvider} from 'react-query'
 import OtraPeticion from './Components/OtraPeticion';
+import Paginacion from './Components/Paginacion';
+import PaginacionUser from './Components/PaginacionUser';
 import PeticionesUsuarios from './Components/PeticionesUsuarios';
 import UserForms from './Components/UserForms';
 /*
@@ -22,10 +24,12 @@ const App = () => {
   const [show, setShow] = useState(false);
   return (
     <QueryClientProvider client={queryClient}>
-      <PeticionesUsuarios/>
+      {/* <PeticionesUsuarios/>
       <button onClick={()=> setShow(!show)}>Mostrar</button>
       {show && <OtraPeticion/>}
-      <UserForms />
+      <UserForms /> */}
+      <PaginacionUser />
+      <Paginacion />
     </QueryClientProvider>
   )
 }
